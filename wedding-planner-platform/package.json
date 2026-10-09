@@ -1,0 +1,27 @@
+{
+  "name": "wedding-planner-platform",
+  "version": "1.0.0",
+  "description": "Wedding Planner and Vendor Coordination Platform (WPVCP) - Complete Enterprise Full-Stack Application",
+  "private": true,
+  "scripts": {
+    "db:setup": "npm --prefix backend run db:setup",
+    "install:backend": "npm --prefix backend install",
+    "install:frontend": "npm --prefix frontend install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "start": "npm --prefix backend start"
+  },
+  "keywords": [
+    "wedding-planner",
+    "vendor-coordination",
+    "mysql",
+    "express",
+    "react",
+    "vite",
+    "full-stack"
+  ],
+  "author": "Vows & Veils Concierge Team",
+  "license": "MIT"
+}

@@ -1,0 +1,426 @@
+Paragraph count: 579
+Table count: 32
+
+--- PARAGRAPH SAMPLES & HEADINGS ---
+P0 [None]: STORE MANAGEMENT SYSTEM
+P1 [None]: 23CS54C – MODERN WEB TECHNOLOGIES
+P2 [None]: Submitted by
+P3 [None]: HARIRAAM B 24104085
+P4 [None]: In partial fulfillment for the award of the degree
+P5 [None]: of
+P6 [None]: BACHELOR OF ENGINEERING/TECHNOLOGY
+P7 [None]: in
+P8 [None]: COMPUTER SCIENCE AND ENGINEERING/ INFORMATION TECHNOLOGY
+P10 [None]: NATIONAL ENGINEERING COLLEGE
+P11 [None]: (An Autonomous Institution affiliated to Anna University, Chennai)
+P12 [None]: K.R.NAGAR, KOVILPATTI - 628503
+P13 [None]: OCTOBER - 2026
+P15 [None]: NATIONAL ENGINEERING COLLEGE
+P16 [None]: (An Autonomous Institution affiliated to Anna University, Chennai)
+P17 [None]: K.R.NAGAR, KOVILPATTI - 628503
+P19 [None]: BONAFIDE CERTIFICATE
+P21 [None]: Course Instructor/Guide
+P23 [None]: Internal Examiner	Co Examiner
+P25 [None]: TABLE OF CONTENTS
+P26 [None]: CH NO	TITLE	PAGE NO
+P27 [None]: 1	INTRODUCTION	3
+P28 [None]: 2	OBJECTIVES	4
+P29 [None]: 3	DESCRIPTION	5
+P30 [None]: 4	CLASS DIAGRAM	6
+P31 [None]: 5	TABLE STRUCTURES	7
+P32 [None]: 6	ER DIAGRAM	16
+P33 [None]: 7	TECH STACK	18
+P34 [None]: 8	MODULES	19
+P35 [None]: 9	CONCLUSION	70
+P36 [None]: CHAPTER 1
+P37 [Heading 1]: INTRODUCTION
+P42 [None]: CHAPTER 2
+P43 [Heading 1]: OBJECTIVES
+P54 [None]: CHAPTER 3
+P55 [Heading 1]: DESCRIPTION
+P57 [None]: 1. Master Data Management
+P59 [None]: 2. Transaction Management
+P61 [None]: 3. Reports and Dashboard
+P63 [None]: 4. Security and Access Control
+P65 [None]: 5. Technology and Deployment
+P67 [None]: CHAPTER 4
+P68 [Heading 1]: CLASS DIAGRAM
+P70 [None]: CHAPTER 5
+P71 [Heading 1]: TABLE STRUCTURES
+P72 [None]: Users
+P75 [None]: Supplier Details
+P78 [None]: Uoms :
+P81 [None]: States :
+P84 [None]: Sub_Heads :
+P87 [None]: Store Master :
+P90 [None]: ProductHead :
+P93 [None]: Department :
+P96 [None]: Purchase_Type :
+P99 [None]: ItemMaster :
+P102 [None]: Party_master :
+P105 [None]: Purchase_orders :
+P108 [None]: Purchase_order_details :
+P111 [None]: Item :
+P114 [None]: Gate_inward :
+P117 [None]: Gate_inward_details :
+P120 [None]: Receipts
+P123 [None]: Receipt_details :
+P126 [None]: Bill_entry_details :
+P129 [None]: Item_issue :
+P132 [None]: Item_issue_detail :
+P135 [None]: Bill_entries :
+P138 [None]: Cancel_orders :
+P141 [None]: CHAPTER 6
+P142 [Heading 1]: ER DIAGRAM
+P143 [None]: ADDITIONAL MASTER TABLES
+P147 [None]: CHAPTER 7
+P148 [Heading 1]: TECH STACK
+P149 [Heading 2]: 7.1 TECH STACK
+P150 [Heading 2]: 7.2 ARCHITECTURE OVERVIEW
+P151 [None]: CHAPTER 8
+P152 [Heading 1]: MODULES
+P153 [Heading 2]: 8.0 Design Approach
+P156 [Heading 3]: Shared baseline for all modules
+P158 [None]: Sizing baseline (assumptions).
+P162 [None]: Fig 8.0 Overall request flow of the Store Management System
+P163 [Heading 2]: 8.1 FOLDER STRUCTURE
+P165 [None]: Fig 8.1.1 Highlevel view of project
+P166 [None]: 8.1.1 BACKEND FOLDER
+P170 [None]: Fig 8.1.3 config Folder structure
+P172 [None]: Fig 8.1.4 Controller Folder
+P175 [None]: 8.1.2 FRONTEND FOLDER
+P177 [None]: FIG 8.1.7 Structure of Frontend Folder
+P179 [None]: Fig 8.1.8 Structure of frontend/src
+P182 [None]: Fig 8.1.9 Structure of frontend/src/pages Folder
+P184 [None]: Fig 8.1.10 Structure of frontend/src/routes and frontend/src/services
+P186 [None]: Fig 8.1.11 Structure of frontend/src/components
+P187 [Heading 2]: 8.2 USER AUTHENTICATION & ACCESS CONTROL
+P188 [Heading 3]: 8.2.0 Purpose & Scope
+P190 [Heading 3]: 8.2.1 Functional Requirements
+P191 [None]: What the module must do:
+P198 [Heading 3]: 8.2.2 Non-Functional Requirements
+P206 [Heading 3]: 8.2.3 Tech Stack
+P208 [Heading 3]: 8.2.4 Back-of-the-Envelope Estimation
+P211 [Heading 3]: 8.2.5 Low-Level Architecture
+P213 [None]: Fig 8.2.A Low-level architecture – USER AUTHENTICATION & ACCESS CONTROL
+P214 [None]: Request flow:
+P221 [Heading 3]: 8.2.6 API Design
+P224 [Heading 3]: 8.2.7 DB Design
+P227 [Heading 3]: 8.2.8 Screenshots
+P229 [None]: Fig 8.2: User Login & Authentication Interface
+P230 [Heading 2]: 8.3 MASTER DATA MANAGEMENT
+P231 [Heading 3]: 8.3.0 Purpose & Scope
+P233 [Heading 3]: 8.3.1 Functional Requirements
+P234 [None]: What the module must do:
+P239 [List Paragraph]: Bulk upload of items from a CSV file.
+P242 [Heading 3]: 8.3.2 Non-Functional Requirements
+P249 [Heading 3]: 8.3.3 Tech Stack
+P251 [Heading 3]: 8.3.4 Back-of-the-Envelope Estimation
+P254 [Heading 3]: 8.3.5 Low-Level Architecture
+P256 [None]: Fig 8.3.A Low-level architecture – MASTER DATA MANAGEMENT
+P257 [None]: Request flow:
+P262 [Heading 3]: 8.3.6 API Design
+P265 [Heading 3]: 8.3.7 DB Design
+P267 [Heading 3]: 8.3.8 Screenshots
+P269 [None]: fig 8.3.1 Department master list
+P272 [None]: fig 8.3.2 Editing a department
+P275 [None]: fig 8.3.3 Adding a department
+P278 [None]: fig 8.3.4 Supplier master list
+P281 [None]: fig 8.3.5 Filtering suppliers by place
+P284 [None]: fig 8.3.6 New supplier entry
+P287 [None]: fig 8.3.7 Item master list
+P290 [None]: fig 8.3.8 Filtering items by sub head
+P293 [None]: fig 8.3.9 Filtering items by department
+P296 [None]: fig 8.3.10 New item entry
+P299 [None]: fig 8.3.11 Purchase type master list
+P302 [None]: fig 8.3.12 Adding a purchase type
+P305 [None]: fig 8.3.13 Unit of measurement master list
+P308 [None]: fig 8.3.14 Adding a unit of measurement
+P311 [None]: fig 8.3.15 State master list
+P313 [Heading 2]: 8.4 PURCHASE ORDER (PO) MANAGEMENT
+P314 [Heading 3]: 8.4.0 Purpose & Scope
+P316 [Heading 3]: 8.4.1 Functional Requirements
+P317 [None]: What the module must do:
+P324 [Heading 3]: 8.4.2 Non-Functional Requirements
+P333 [Heading 3]: 8.4.3 Tech Stack
+P335 [Heading 3]: 8.4.4 Back-of-the-Envelope Estimation
+P338 [Heading 3]: 8.4.5 Low-Level Architecture
+P340 [None]: Fig 8.4.A Low-level architecture – PURCHASE ORDER (PO) MANAGEMENT
+P341 [None]: Request flow:
+P347 [Heading 3]: 8.4.6 API Design
+P350 [Heading 3]: 8.4.7 DB Design
+P353 [Heading 3]: 8.4.8 Screenshots
+P355 [None]: fig 8.4.1 Purchase order list
+P358 [None]: fig 8.4.2 Creating a purchase order
+P361 [None]: fig 8.4.3 Purchase order item calculation
+P364 [None]: fig 8.4.4 Purchase order financial summary
+P367 [None]: fig 8.4.5 Expanded purchase order details
+P369 [Heading 2]: 8.5 GOODS INWARD & INVENTORY RECEIPT (GRN)
+P370 [Heading 3]: 8.5.0 Purpose & Scope
+P372 [Heading 3]: 8.5.1 Functional Requirements
+P373 [None]: What the module must do:
+P376 [List Paragraph]: Duplicate invoice check: warn when the same supplier invoice is entered twice.
+P380 [Heading 3]: 8.5.2 Non-Functional Requirements
+P388 [Heading 3]: 8.5.3 Tech Stack
+P390 [Heading 3]: 8.5.4 Back-of-the-Envelope Estimation
+P393 [Heading 3]: 8.5.5 Low-Level Architecture
+P395 [None]: Fig 8.5.A Low-level architecture – GOODS INWARD & INVENTORY RECEIPT (GRN)
+P396 [None]: Request flow:
+P401 [List Paragraph]: Bill Entry (next module) later reads the GRN by GRNNo.
+P402 [Heading 3]: 8.5.6 API Design
+P405 [Heading 3]: 8.5.7 DB Design
+P407 [Heading 3]: 8.5.8 Screenshots
+P409 [None]: fig 8.5.1 Gate inward list
+P412 [None]: fig 8.5.2 Selecting a supplier for gate inward
+P415 [None]: fig 8.5.3 Linking gate inward to a purchase order
+P418 [None]: fig 8.5.4 Goods receipt register
+P421 [None]: fig 8.5.5 Creating a goods receipt
+P424 [None]: fig 8.5.6 Goods receipt financial summary
+P427 [None]: fig 8.5.7 Editing a goods receipt
+P430 [None]: fig 8.5.8 Expanded goods receipt details
+P432 [Heading 2]: 8.6 BILL ENTRY
+P433 [Heading 3]: 8.6.0 Purpose & Scope
+P435 [Heading 3]: 8.6.1 Functional Requirements
+P436 [None]: What the module must do:
+P440 [List Paragraph]: Support both intra-state (CGST + SGST) and inter-state (IGST) tax amounts.
+P444 [Heading 3]: 8.6.2 Non-Functional Requirements
+P450 [List Paragraph]: Print performance: a voucher renders in under 1 second.
+P452 [Heading 3]: 8.6.3 Tech Stack
+P454 [Heading 3]: 8.6.4 Back-of-the-Envelope Estimation
+P457 [Heading 3]: 8.6.5 Low-Level Architecture
+P459 [None]: Fig 8.6.A Low-level architecture – BILL ENTRY
+P460 [None]: Request flow:
+P465 [List Paragraph]: Print uses getPrintData to render the voucher.
+P466 [Heading 3]: 8.6.6 API Design
+P469 [Heading 3]: 8.6.7 DB Design
+P472 [Heading 3]: 8.6.8 Screenshots
+P474 [None]: fig 8.6.1 Bill entry register
+P477 [None]: fig 8.6.2 Creating a supplier bill entry
+P480 [None]: fig 8.6.3 Bill entry financial breakdown
+P483 [None]: fig 8.6.4 Expanded bill entry details
+P485 [Heading 2]: 8.7 MATERIAL REQUISITION & GATE PASS MOVEMENT
+P486 [Heading 3]: 8.7.0 Purpose & Scope
+P488 [Heading 3]: 8.7.1 Functional Requirements
+P489 [None]: What the module must do:
+P493 [List Paragraph]: Edit or delete an existing issue; list issues by department.
+P496 [Heading 3]: 8.7.2 Non-Functional Requirements
+P503 [Heading 3]: 8.7.3 Tech Stack
+P505 [Heading 3]: 8.7.4 Back-of-the-Envelope Estimation
+P508 [Heading 3]: 8.7.5 Low-Level Architecture
+P510 [None]: Fig 8.7.A Low-level architecture – MATERIAL REQUISITION & GATE PASS MOVEMENT
+P511 [None]: Request flow:
+P516 [Heading 3]: 8.7.6 API Design
+P519 [Heading 3]: 8.7.7 DB Design
+P522 [Heading 3]: 8.7.8 Screenshots
+P524 [None]: fig 8.7.1 Creating a gate pass outward
+P527 [None]: fig 8.7.2 Editing a gate pass outward
+P529 [Heading 2]: 8.8 EXECUTIVE DASHBOARD & BUSINESS ANALYTICS
+P530 [Heading 3]: 8.8.0 Purpose & Scope
+P532 [Heading 3]: 8.8.1 Functional Requirements
+P533 [None]: What the module must do:
+P540 [Heading 3]: 8.8.2 Non-Functional Requirements
+P548 [Heading 3]: 8.8.3 Tech Stack
+P550 [Heading 3]: 8.8.4 Back-of-the-Envelope Estimation
+P553 [Heading 3]: 8.8.5 Low-Level Architecture
+P555 [None]: Fig 8.8.A Low-level architecture – EXECUTIVE DASHBOARD & BUSINESS ANALYTICS
+P556 [None]: Request flow:
+P557 [List Paragraph]: Dashboard.jsx calls the dashboard endpoints on load and on Refresh.
+P561 [Heading 3]: 8.8.6 API Design
+P564 [Heading 3]: 8.8.7 DB Design
+P566 [Heading 3]: 8.8.8 Screenshots
+P568 [None]: fig 8.8.1 Operational dashboard
+P571 [None]: fig 8.8.2 Department wise issue report
+P574 [None]: fig 8.8.3 Date wise order report
+P576 [None]: CHAPTER 9
+P577 [Heading 1]: CONCLUSION
+
+--- TABLES SUMMARY ---
+
+Table 0: 11 rows x 3 cols
+  Row 0: Layer | Technology | Purpose
+  Row 1: Frontend | React.js (Vite) | Single-page application with dynamic UI
+  Row 2: State Management | Redux Toolkit | Centralized application state
+  Row 3: HTTP Client | Axios | REST API communication with JWT auth
+
+Table 1: 4 rows x 3 cols
+  Row 0: Layer | Technology | Purpose
+  Row 1: Model | Sequelize ORM + MySQL | Defines data structure, handles DB queries, manages relationships and validations
+  Row 2: View | React.js + Redux | Renders the UI, manages user interaction, communicates with the server via Axios
+  Row 3: Controller | Node.js + Express.js | Receives HTTP requests, applies business logic, coordinates between Model and View
+
+Table 2: 8 rows x 3 cols
+  Row 0: Step | Question it answers | Presented in each module as
+  Row 1: 1. Functional requirements | What must the module do? | Section x.1
+  Row 2: 2. Non-functional requirements | How fast, how big, how available? Where does the CAP trade-off fall? | Section x.2
+  Row 3: 3. Tech stack | Which tools suit this problem, and why? | Section x.3
+
+Table 3: 8 rows x 3 cols
+  Row 0: Quantity | Estimate | Basis
+  Row 1: Named users | ≈ 20 | Store, purchase, accounts and management staff of one organization (assumption)
+  Row 2: Working days / year | 300 | Assumption
+  Row 3: Requests per user per day | ≈ 300 | Form loads, dropdown look-ups and saves (assumption)
+
+Table 4: 6 rows x 3 cols
+  Row 0: Concern | Choice | Why it fits this module
+  Row 1: Password hashing | bcryptjs (salted) | Pure JavaScript, no native build step on the Jenkins/production server
+  Row 2: Session | JSON Web Token, 12 h | Stateless; the client keeps the token and sends it in the Authorization header
+  Row 3: Abuse control | rateLimiter.js middleware | Applies the 15 per 15 minute limit only to the login route
+
+Table 5: 7 rows x 3 cols
+  Row 0: Quantity | Estimate | Basis
+  Row 1: Users | ≈ 20 rows, < 10 KB | Assumption (≈ 0.5 KB per row)
+  Row 2: Logins per day | ≈ 40 | 20 users × about 2 logins (12-hour tokens)
+  Row 3: Login burst | ≈ 20 logins in 5 minutes | Start of shift ≈ 0.07 login/s
+
+Table 6: 5 rows x 3 cols
+  Row 0: Method | Endpoint | Purpose / contract
+  Row 1: POST | /api/auth/login (public) | Body: username, password. Returns JWT bearer token and user profile (id, full_name, role). Rate limited.
+  Row 2: POST | /api/auth/register | Admin only. Creates a user with a hashed password and a role.
+  Row 3: GET | /api/auth/me | Returns the profile of the signed-in user from the token.
+
+Table 7: 2 rows x 3 cols
+  Row 0: Table | Keys & indexes | Key columns
+  Row 1: Users | PK id (auto increment) UNIQUE username | username varchar(100), password varchar(255) hash, full_name, email, role enum(admin, manager, operator, viewer) default operator, status enum(active, inactive) default active, last_login, createdAt, updatedAt
+
+Table 8: 5 rows x 3 cols
+  Row 0: Concern | Choice | Why it fits this module
+  Row 1: List UI | React pages + EntityFilterPanel, SearchSelect, CustomSelect | One reusable filter and dropdown set for every master screen
+  Row 2: Server paging | Sequelize queries with limit / offset and where-filters | Keeps the response small even for the 11,011-row item catalog
+  Row 3: Bulk load | bulkUploadItems endpoint (CSV) | Loads the opening catalog without typing each row
+
+Table 9: 7 rows x 3 cols
+  Row 0: Quantity | Estimate | Basis
+  Row 1: Suppliers | 5,490 rows ≈ 6.6 MB | Live count; ≈ 1.2 KB per row
+  Row 2: Items | 11,011 rows ≈ 6.6 MB | Live count; ≈ 0.6 KB per row
+  Row 3: Small masters | 31 departments, 14 UOMs, 33 states, 73 purchase types (< 100 KB) | Live counts
+
+Table 10: 8 rows x 3 cols
+  Row 0: Method | Endpoint | Purpose / contract
+  Row 1: GET | /api/{master} | List with search, filters, sort, page and limit; returns rows and total count.
+  Row 2: GET | /api/{master}/:id | One record by its primary key.
+  Row 3: POST | /api/{master} | Create a record (item, supplier, department, store, UOM, state, purchase type …).
+
+Table 11: 12 rows x 3 cols
+  Row 0: Table | Keys & indexes | Key columns
+  Row 1: Department | PK dept_id (auto) UNIQUE dept_name | dept_name varchar(100)
+  Row 2: Supplier Details | PK PartyCode varchar(30) | AccountName, Place, Address, DeliveryAddress, GSTNo, PanNumber, PhNo, Email, ContactPerson, OpeningCredit / OpeningDebit decimal(20,2)
+  Row 3: Item | PK ItemCode varchar(255) | ItemName, UnitRate, MinStockLevel, MaxStockLevel, OpeningQty, Quantity, OpenValue, Location, DepartmentId, HSNCode, SubHeadCode, UOM, Category, Commodity
+
+Table 12: 6 rows x 3 cols
+  Row 0: Concern | Choice | Why it fits this module
+  Row 1: Entry form | React modal with live calculation | The user sees line and grand totals while typing, before the PO is saved
+  Row 2: Numbers | MySQL DECIMAL(15,2) / (15,6) | Exact arithmetic for money and fractional unit rates
+  Row 3: Atomic save | Sequelize transaction | Header and detail rows commit or roll back together
+
+Table 13: 9 rows x 3 cols
+  Row 0: Quantity | Estimate | Basis
+  Row 1: POs to date | 772 | Live (latest PO-772)
+  Row 2: New POs per day | ≤ 15 | Assumption (peak)
+  Row 3: POs per year | 15 × 300 = 4,500 | Derived
+
+Table 14: 9 rows x 3 cols
+  Row 0: Method | Endpoint | Purpose / contract
+  Row 1: GET | /api/purchase-orders | List with search, party, status, sort and paging; returns header, item count and grand total.
+  Row 2: GET | /api/purchase-orders/:id | One PO with its lines (getPurchaseOrderById).
+  Row 3: GET | /api/purchase-orders/suppliers | Supplier look-up by name for the party dropdown.
+
+Table 15: 4 rows x 3 cols
+  Row 0: Table | Keys & indexes | Key columns
+  Row 1: Purchase_orders | PK OrderNo bigint MUL PartyCode → Supplier | OrderDate, Address, Place, Remarks, RefNo, Total, Discount, GST, IGST, VAT_CST, P_F, LorryFreight, RoundOff, GrandTotal, Status (default Draft)
+  Row 2: Purchase_order_details | PK DetailId (auto) MUL OrderNo | ItemCode, Qty, UnitRate (15,6), DiscountPct / DiscountAmt, GSTType, SGST / CGST / IGST %, amounts, PF_Amount, LorryFreight, MRS_No, GrandTotal
+  Row 3: Cancel_orders | PK CancelNo (auto) | OrderNo, PartyName, CancelDate, Reason, Status (default Active)
+
+Table 16: 5 rows x 3 cols
+  Row 0: Concern | Choice | Why it fits this module
+  Row 1: Dependent dropdowns | React + SearchSelect | Selecting a party filters the PO list; selecting a PO loads its pending items
+  Row 2: Numbering | Server-side last-number look-up (getLastInwardNo, getLastGRNNo) | Sequential GI and GRN numbers shown in the form
+  Row 3: Transactions | Sequelize transaction | Receipt, stock update and status change succeed or fail together
+
+Table 17: 7 rows x 3 cols
+  Row 0: Quantity | Estimate | Basis
+  Row 1: Receipts to date | 770 (GRN-260771 latest) | Live
+  Row 2: Gate inwards per year | ≈ 5,400 | 4,500 POs × 1.2 batches (assume 20 % are delivered in two parts)
+  Row 3: Receipts per year | ≈ 4,500 | About one GRN per PO
+
+Table 18: 13 rows x 3 cols
+  Row 0: Method | Endpoint | Purpose / contract
+  Row 1: GET | /api/gate-inwards | List with search, party filter, sort, paging.
+  Row 2: GET | /api/gate-inwards/last-no | Next inward number (getLastInwardNo).
+  Row 3: GET | /api/gate-inwards/purchase-orders/:partyCode | Open POs of a party (getPurchaseOrdersByParty).
+
+Table 19: 5 rows x 3 cols
+  Row 0: Table | Keys & indexes | Key columns
+  Row 1: Gate_inward | PK InwardNo (auto) | OrderNo, PartyCode, InwardDate, InvoiceNo, InvoiceDate, Status (default Draft)
+  Row 2: Gate_inward_details | PK DetailId (auto) MUL InwardNo | OrderNo, ItemCode, PendingQty, ReceivedQty
+  Row 3: Receipts | PK GRNNo (auto) | PartyCode, GateInwardNo, InwardDate, InvoiceNo / Date, DCNo / DCDate, FormType, BillAmount, Total, Discount, GST, IGST, VAT_CST, P_F, LorryFreight, RoundOff, GrandTotal, Status
+
+Table 20: 5 rows x 3 cols
+  Row 0: Concern | Choice | Why it fits this module
+  Row 1: Source of truth | GRN lines copied into Bill_entry_details | The bill is built from received goods, not retyped
+  Row 2: Uniqueness | UNIQUE keys on GateInwardNo and GRNNo | Database-level guard against double billing
+  Row 3: Tax fields | GST, IGST, VAT_CST, TDS, TCS columns | Covers the tax forms used by the purchase types
+
+Table 21: 7 rows x 3 cols
+  Row 0: Quantity | Estimate | Basis
+  Row 1: Bills to date | 768 (VCH-769 latest) | Live
+  Row 2: Bills per year | ≈ 4,500 | About one bill per GRN
+  Row 3: Storage per bill | ≈ 3 KB | 1.5 KB header + 3 lines × 0.5 KB
+
+Table 22: 11 rows x 3 cols
+  Row 0: Method | Endpoint | Purpose / contract
+  Row 1: GET | /api/bill-entries | Register with party filter, sort and paging.
+  Row 2: GET | /api/bill-entries/last-voucher-no | Next voucher number (getLastVoucherNo).
+  Row 3: GET | /api/bill-entries/available-parties | Parties with unbilled GRNs (getAvailableParties).
+
+Table 23: 4 rows x 3 cols
+  Row 0: Table | Keys & indexes | Key columns
+  Row 1: Bill_entries | PK VoucherNo (auto) UNIQUE GateInwardNo UNIQUE GRNNo | OrderNo, PartyCode, AccDate, PartyBillNo, BillDate, PurchaseType, BillAmount, TDS, Narration, Total, Discount, GST, IGST, VAT_CST, P_F, LorryFreight, RoundOff, TaxRndOff, GrandTotal, TCS, Status
+  Row 2: Bill_entry_details | PK DetailId (auto) MUL VoucherNo | OrderNo, ItemCode, Qty, UnitRate, TotalAmount
+  Row 3: bill_verify | PK VerifyNo FK VoucherNo → Bill_entries | BillNo, BillDate, PartyName, BillAmount, GSTAmount, IGSTAmount, VerifyDate, PaymentStatus, Remarks
+
+Table 24: 5 rows x 3 cols
+  Row 0: Concern | Choice | Why it fits this module
+  Row 1: Stock check | Server-side validation + Sequelize transaction | Prevents over-issue and negative stock
+  Row 2: Item list | React table with live filter and remaining-stock indicator | Fast data entry for large catalogs
+  Row 3: Numbering | getLastIssueNo | Sequential voucher numbers
+
+Table 25: 8 rows x 3 cols
+  Row 0: Quantity | Estimate | Basis
+  Row 1: Issues per day | ≈ 30 | Assumption (store with 31 departments)
+  Row 2: Issues per year | 30 × 300 = 9,000 | Derived
+  Row 3: Lines per issue | ≈ 4 | Assumption
+
+Table 26: 8 rows x 3 cols
+  Row 0: Method | Endpoint | Purpose / contract
+  Row 1: GET | /api/item-issues | List issues with filters and paging.
+  Row 2: GET | /api/item-issues/last-no | Next issue number (getLastIssueNo).
+  Row 3: GET | /api/item-issues/departments | Department list for the form.
+
+Table 27: 4 rows x 3 cols
+  Row 0: Table | Keys & indexes | Key columns
+  Row 1: Item_issue | PK IssueNo (auto) | IssueDate, IndentNo, Department, Approval, Remarks, Status (default Draft)
+  Row 2: Item_issue_detail | PK DetailId (auto) MUL IssueNo | ItemName, CatNo, DrawNo, Qty, UOM, EmpName, OpeningQty
+  Row 3: Gate pass tables | GatePassOut, GatePassOutDetail, GatePassIn, GatePassInDetail | Header and detail pair for outward and inward movement
+
+Table 28: 6 rows x 3 cols
+  Row 0: Concern | Choice | Why it fits this module
+  Row 1: Aggregation | Sequelize / SQL GROUP BY queries in dashboardController, reportController | Computes counts, monthly totals and department-wise sums in the database
+  Row 2: Charts | React dashboard components | Monthly bar chart and status bars
+  Row 3: Excel | ExcelJS (server-side) | Formatted, streamed .xlsx files
+
+Table 29: 7 rows x 3 cols
+  Row 0: Quantity | Estimate | Basis
+  Row 1: Dashboard load | ≈ 5–6 aggregate queries | KPIs, monthly series, recent log
+  Row 2: Dashboard loads per day | ≈ 100 | 20 users × 5 loads → ≈ 600 queries / day
+  Row 3: One-year purchase report | ≈ 13,500 rows | 4,500 POs × 3 lines
+
+Table 30: 6 rows x 3 cols
+  Row 0: Method | Endpoint | Purpose / contract
+  Row 1: GET | /api/dashboard/summary | KPI counters: active POs, items in stock, gate passes, pending verifications.
+  Row 2: GET | /api/dashboard/monthly | Monthly counts of POs, gate-in and gate-out.
+  Row 3: GET | /api/dashboard/recent-inwards | Latest gate inward entries.
+
+Table 31: 3 rows x 3 cols
+  Row 0: Table | Keys & indexes | Key columns
+  Row 1: No new table | Read-only | Aggregated queries across the 29 tables via dashboardController.js and reportController.js
+  Row 2: Tables read | Purchase_orders (+details), Gate_inward, Receipts (+details), Bill_entries, Item, Item_issue (+detail), gate pass tables | Date columns OrderDate, InwardDate, BillDate, IssueDate drive the report filters

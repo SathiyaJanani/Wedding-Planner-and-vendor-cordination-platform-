@@ -1,0 +1,2490 @@
+{
+  "booking_services": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "booking_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "vendor_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "vendor_request_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "service_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "service_name",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "category_name",
+      "type": "varchar(100)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "agreed_price",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "paid_amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('PROPOSED','CUSTOMER_APPROVED','CUSTOMER_CHANGE_REQUESTED','CONFIRMED','COMPLETED')",
+      "null": "NO",
+      "key": "",
+      "default": "PROPOSED",
+      "extra": ""
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "bookings": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "booking_code",
+      "type": "varchar(50)",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "wedding_project_id",
+      "type": "int",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "customer_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "planner_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "total_amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "advance_amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "paid_amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('DRAFT','REQUESTED','PENDING_VENDOR_RESPONSE','VENDOR_ACCEPTED','CUSTOMER_APPROVAL','PAYMENT_PENDING','PARTIALLY_PAID','FULLY_PAID','CONFIRMED','SERVICE_IN_PROGRESS','COMPLETED','CANCELLED')",
+      "null": "NO",
+      "key": "MUL",
+      "default": "DRAFT",
+      "extra": ""
+    },
+    {
+      "name": "customer_feedback",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "budget_items": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "budget_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "category_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "item_name",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "estimated_cost",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "actual_cost",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "paid_cost",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('PLANNED','BOOKED','PAID')",
+      "null": "NO",
+      "key": "",
+      "default": "PLANNED",
+      "extra": ""
+    },
+    {
+      "name": "notes",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "budgets": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "wedding_project_id",
+      "type": "int",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "total_budget",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "allocated_amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "spent_amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "remaining_amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "chatbot_conversations": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "user_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "session_token",
+      "type": "varchar(100)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "title",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "Wedding Assistant Session",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "chatbot_messages": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "conversation_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "sender",
+      "type": "enum('USER','BOT')",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "message_text",
+      "type": "text",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "metadata",
+      "type": "json",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    }
+  ],
+  "conversations": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "wedding_project_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "participant_one_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "participant_two_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "last_message_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "customers": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "user_id",
+      "type": "int",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "partner_name",
+      "type": "varchar(150)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "wedding_date",
+      "type": "date",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "city",
+      "type": "varchar(100)",
+      "null": "YES",
+      "key": "",
+      "default": "Bangalore",
+      "extra": ""
+    },
+    {
+      "name": "state",
+      "type": "varchar(100)",
+      "null": "YES",
+      "key": "",
+      "default": "Karnataka",
+      "extra": ""
+    },
+    {
+      "name": "address",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "wedding_theme",
+      "type": "varchar(100)",
+      "null": "YES",
+      "key": "",
+      "default": "Royal Traditional",
+      "extra": ""
+    },
+    {
+      "name": "guest_count",
+      "type": "int",
+      "null": "YES",
+      "key": "",
+      "default": "350",
+      "extra": ""
+    },
+    {
+      "name": "estimated_budget",
+      "type": "decimal(12,2)",
+      "null": "YES",
+      "key": "",
+      "default": "1200000.00",
+      "extra": ""
+    },
+    {
+      "name": "planner_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "documents": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "wedding_project_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "uploader_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "title",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "document_type",
+      "type": "enum('CONTRACT','INVOICE','ID_PROOF','DESIGN_SKETCH','CHECKLIST','OTHER')",
+      "null": "NO",
+      "key": "",
+      "default": "OTHER",
+      "extra": ""
+    },
+    {
+      "name": "file_path",
+      "type": "varchar(255)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "file_size",
+      "type": "int",
+      "null": "NO",
+      "key": "",
+      "default": "0",
+      "extra": ""
+    },
+    {
+      "name": "file_type",
+      "type": "varchar(100)",
+      "null": "YES",
+      "key": "",
+      "default": "application/pdf",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('ACTIVE','ARCHIVED')",
+      "null": "NO",
+      "key": "",
+      "default": "ACTIVE",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "invoices": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "invoice_number",
+      "type": "varchar(50)",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "booking_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "payment_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "issuer_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "recipient_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "subtotal",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "tax_amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "0.00",
+      "extra": ""
+    },
+    {
+      "name": "total_amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('ISSUED','PAID','CANCELLED')",
+      "null": "NO",
+      "key": "",
+      "default": "ISSUED",
+      "extra": ""
+    },
+    {
+      "name": "due_date",
+      "type": "date",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "pdf_url",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "messages": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "conversation_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "sender_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "recipient_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "message_text",
+      "type": "text",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "is_read",
+      "type": "tinyint(1)",
+      "null": "NO",
+      "key": "",
+      "default": "0",
+      "extra": ""
+    },
+    {
+      "name": "read_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "notifications": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "user_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "title",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "message",
+      "type": "text",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "notification_type",
+      "type": "enum('REQUEST_NEW','REQUEST_ACCEPTED','REQUEST_DECLINED','CUSTOMER_APPROVAL','CUSTOMER_APPROVED','CUSTOMER_CHANGE_REQUESTED','PAYMENT_PENDING','PAYMENT_SUCCESS','PAYMENT_FAILED','BOOKING_CONFIRMED','SCHEDULE_UPDATE','MESSAGE','SERVICE_COMPLETED','REVIEW_REQUESTED','SYSTEM')",
+      "null": "NO",
+      "key": "",
+      "default": "SYSTEM",
+      "extra": ""
+    },
+    {
+      "name": "reference_id",
+      "type": "int",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "reference_type",
+      "type": "varchar(50)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "is_read",
+      "type": "tinyint(1)",
+      "null": "NO",
+      "key": "MUL",
+      "default": "0",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    }
+  ],
+  "payment_transactions": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "payment_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "transaction_reference",
+      "type": "varchar(100)",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "payment_method",
+      "type": "enum('MOCK_CARD','MOCK_UPI','MOCK_NETBANKING','STRIPE','RAZORPAY')",
+      "null": "NO",
+      "key": "",
+      "default": "MOCK_UPI",
+      "extra": ""
+    },
+    {
+      "name": "amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "currency",
+      "type": "varchar(10)",
+      "null": "NO",
+      "key": "",
+      "default": "INR",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('SUCCESS','FAILED','REFUNDED')",
+      "null": "NO",
+      "key": "",
+      "default": "SUCCESS",
+      "extra": ""
+    },
+    {
+      "name": "gateway_response",
+      "type": "json",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "paid_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    }
+  ],
+  "payments": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "payment_code",
+      "type": "varchar(50)",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "booking_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "booking_service_id",
+      "type": "int",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "wedding_project_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "customer_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "title",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "milestone_name",
+      "type": "varchar(50)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "amount",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "due_date",
+      "type": "date",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('PENDING','PROCESSING','SUCCESS','FAILED','REFUNDED')",
+      "null": "NO",
+      "key": "MUL",
+      "default": "PENDING",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "planners": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "user_id",
+      "type": "int",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "agency_name",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "Elite Wedding Planners",
+      "extra": ""
+    },
+    {
+      "name": "bio",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "experience_years",
+      "type": "int",
+      "null": "NO",
+      "key": "",
+      "default": "5",
+      "extra": ""
+    },
+    {
+      "name": "contact_phone",
+      "type": "varchar(30)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "wedding_project_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "booking_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "customer_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "vendor_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "planner_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "rating",
+      "type": "int",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "review_text",
+      "type": "text",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "response_text",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "roles": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "name",
+      "type": "enum('ADMIN','PLANNER','VENDOR','CUSTOMER')",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "service_categories": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "name",
+      "type": "varchar(100)",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "slug",
+      "type": "varchar(100)",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "icon",
+      "type": "varchar(50)",
+      "null": "YES",
+      "key": "",
+      "default": "Sparkles",
+      "extra": ""
+    },
+    {
+      "name": "is_active",
+      "type": "tinyint(1)",
+      "null": "NO",
+      "key": "",
+      "default": "1",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "support_requests": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "user_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "booking_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "ticket_number",
+      "type": "varchar(50)",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "subject",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "category",
+      "type": "enum('TECHNICAL','BILLING','VENDOR_DISPUTE','ACCOUNT','GENERAL')",
+      "null": "NO",
+      "key": "",
+      "default": "GENERAL",
+      "extra": ""
+    },
+    {
+      "name": "priority",
+      "type": "enum('LOW','MEDIUM','HIGH','URGENT')",
+      "null": "NO",
+      "key": "",
+      "default": "MEDIUM",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('OPEN','IN_PROGRESS','RESOLVED','CLOSED')",
+      "null": "NO",
+      "key": "MUL",
+      "default": "OPEN",
+      "extra": ""
+    },
+    {
+      "name": "assigned_to",
+      "type": "int",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "message",
+      "type": "text",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "resolution_notes",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "resolved_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "users": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "email",
+      "type": "varchar(191)",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "password_hash",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "role_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "full_name",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "phone",
+      "type": "varchar(30)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "avatar_url",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "auth_provider",
+      "type": "enum('local','google')",
+      "null": "NO",
+      "key": "",
+      "default": "local",
+      "extra": ""
+    },
+    {
+      "name": "google_id",
+      "type": "varchar(191)",
+      "null": "YES",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "email_verified",
+      "type": "tinyint(1)",
+      "null": "NO",
+      "key": "",
+      "default": "0",
+      "extra": ""
+    },
+    {
+      "name": "is_active",
+      "type": "tinyint(1)",
+      "null": "NO",
+      "key": "",
+      "default": "1",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "vendor_availability": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "vendor_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "start_time",
+      "type": "time",
+      "null": "NO",
+      "key": "",
+      "default": "08:00:00",
+      "extra": ""
+    },
+    {
+      "name": "end_time",
+      "type": "time",
+      "null": "NO",
+      "key": "",
+      "default": "22:00:00",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('AVAILABLE','UNAVAILABLE','BOOKED','RESERVED')",
+      "null": "NO",
+      "key": "",
+      "default": "AVAILABLE",
+      "extra": ""
+    },
+    {
+      "name": "reason",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "vendor_requests": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "request_code",
+      "type": "varchar(50)",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "wedding_project_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "planner_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "vendor_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "service_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "event_date",
+      "type": "date",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "start_time",
+      "type": "time",
+      "null": "NO",
+      "key": "",
+      "default": "09:00:00",
+      "extra": ""
+    },
+    {
+      "name": "end_time",
+      "type": "time",
+      "null": "NO",
+      "key": "",
+      "default": "21:00:00",
+      "extra": ""
+    },
+    {
+      "name": "proposed_price",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('PENDING','ACCEPTED','DECLINED','CANCELLED','EXPIRED')",
+      "null": "NO",
+      "key": "MUL",
+      "default": "PENDING",
+      "extra": ""
+    },
+    {
+      "name": "decline_reason",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "responded_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "vendor_services": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "vendor_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "name",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "price",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "pricing_unit",
+      "type": "varchar(50)",
+      "null": "NO",
+      "key": "",
+      "default": "per_event",
+      "extra": ""
+    },
+    {
+      "name": "is_active",
+      "type": "tinyint(1)",
+      "null": "NO",
+      "key": "",
+      "default": "1",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "vendors": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "user_id",
+      "type": "int",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "business_name",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "category_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "experience_years",
+      "type": "int",
+      "null": "NO",
+      "key": "",
+      "default": "3",
+      "extra": ""
+    },
+    {
+      "name": "address",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "city",
+      "type": "varchar(100)",
+      "null": "NO",
+      "key": "MUL",
+      "default": "Bangalore",
+      "extra": ""
+    },
+    {
+      "name": "state",
+      "type": "varchar(100)",
+      "null": "NO",
+      "key": "",
+      "default": "Karnataka",
+      "extra": ""
+    },
+    {
+      "name": "postal_code",
+      "type": "varchar(20)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "latitude",
+      "type": "decimal(10,8)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "longitude",
+      "type": "decimal(11,8)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "service_locations",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "Bangalore, Chennai, Hyderabad",
+      "extra": ""
+    },
+    {
+      "name": "base_price",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "25000.00",
+      "extra": ""
+    },
+    {
+      "name": "price_range",
+      "type": "varchar(100)",
+      "null": "YES",
+      "key": "",
+      "default": "?25,000 - ?1,50,000",
+      "extra": ""
+    },
+    {
+      "name": "rating",
+      "type": "decimal(3,2)",
+      "null": "NO",
+      "key": "",
+      "default": "4.80",
+      "extra": ""
+    },
+    {
+      "name": "total_reviews",
+      "type": "int",
+      "null": "NO",
+      "key": "",
+      "default": "0",
+      "extra": ""
+    },
+    {
+      "name": "is_verified",
+      "type": "tinyint(1)",
+      "null": "NO",
+      "key": "",
+      "default": "1",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "wedding_projects": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "project_code",
+      "type": "varchar(50)",
+      "null": "NO",
+      "key": "UNI",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "customer_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "planner_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "title",
+      "type": "varchar(200)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "wedding_date",
+      "type": "date",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "venue_name",
+      "type": "varchar(200)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "venue_address",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "city",
+      "type": "varchar(100)",
+      "null": "NO",
+      "key": "",
+      "default": "Bangalore",
+      "extra": ""
+    },
+    {
+      "name": "guest_count",
+      "type": "int",
+      "null": "NO",
+      "key": "",
+      "default": "300",
+      "extra": ""
+    },
+    {
+      "name": "total_budget",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "1000000.00",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('PLANNING','IN_PROGRESS','CONFIRMED','COMPLETED','CANCELLED')",
+      "null": "NO",
+      "key": "",
+      "default": "PLANNING",
+      "extra": ""
+    },
+    {
+      "name": "notes",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "wedding_requirements": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "customer_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "wedding_project_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "wedding_date",
+      "type": "date",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "location",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "guest_count",
+      "type": "int",
+      "null": "NO",
+      "key": "",
+      "default": "300",
+      "extra": ""
+    },
+    {
+      "name": "estimated_budget",
+      "type": "decimal(12,2)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "required_services",
+      "type": "json",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "special_preferences",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('DRAFT','SUBMITTED','UNDER_REVIEW','CONVERTED_TO_PROJECT','REJECTED')",
+      "null": "NO",
+      "key": "",
+      "default": "DRAFT",
+      "extra": ""
+    },
+    {
+      "name": "verification_status",
+      "type": "enum('VERIFIED','PENDING_PLANNER_VERIFICATION','DECLINED','DRAFT')",
+      "null": "NO",
+      "key": "",
+      "default": "VERIFIED",
+      "extra": ""
+    },
+    {
+      "name": "last_edited_by",
+      "type": "enum('CUSTOMER','PLANNER','ADMIN')",
+      "null": "NO",
+      "key": "",
+      "default": "CUSTOMER",
+      "extra": ""
+    },
+    {
+      "name": "change_summary",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "wedding_schedule": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "wedding_project_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "event_title",
+      "type": "varchar(150)",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "event_date",
+      "type": "date",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "start_time",
+      "type": "time",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "end_time",
+      "type": "time",
+      "null": "NO",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "location",
+      "type": "varchar(150)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "person_in_charge",
+      "type": "varchar(100)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "vendor_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "status",
+      "type": "enum('SCHEDULED','IN_PROGRESS','COMPLETED','DELAYED')",
+      "null": "NO",
+      "key": "",
+      "default": "SCHEDULED",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+    }
+  ],
+  "wishlists": [
+    {
+      "name": "id",
+      "type": "int",
+      "null": "NO",
+      "key": "PRI",
+      "default": "NULL",
+      "extra": "auto_increment"
+    },
+    {
+      "name": "customer_id",
+      "type": "int",
+      "null": "NO",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "vendor_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "service_id",
+      "type": "int",
+      "null": "YES",
+      "key": "MUL",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "notes",
+      "type": "varchar(255)",
+      "null": "YES",
+      "key": "",
+      "default": "NULL",
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "null": "YES",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": "DEFAULT_GENERATED"
+    }
+  ]
+}
