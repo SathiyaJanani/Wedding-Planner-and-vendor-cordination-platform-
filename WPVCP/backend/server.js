@@ -11,9 +11,22 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
+// Allowed Origins for CORS (Local + Vercel + Configurable)
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  'http://localhost:3000',
+  process.env.FRONTEND_URL
+].filter(Boolean);
+
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost:3000'],
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
+      callback(null, true);
+    } else {
+      callback(null, true);
+    }
+  },
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
@@ -64,13 +77,15 @@ app.use('/api/*', (req, res) => {
 // Centralized error handling
 app.use(errorHandler);
 
-// Start server and check database
-app.listen(PORT, async () => {
-  console.log(`=====================================================================`);
-  console.log(` WPVCP Backend Server running on http://localhost:${PORT}`);
-  console.log(` Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`=====================================================================`);
-  await testConnection();
-});
+// Start server and check database (only when executed directly, not in Vercel serverless)
+if (require.main === module) {
+  app.listen(PORT, async () => {
+    console.log(`=====================================================================`);
+    console.log(` WPVCP Backend Server running on http://localhost:${PORT}`);
+    console.log(` Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`=====================================================================`);
+    await testConnection();
+  });
+}
 
 module.exports = app;
